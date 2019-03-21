@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>MY REGISTRATION FORM</title>
+<script type="text/javascript">
+	function check(){
+		if (document.getElementById('password').value ==
+    document.getElementById('confirmpassword').value) {
+    document.getElementById('password').style.color = 'green';
+    document.getElementById('confirmpassword').style.color = 'green';
+  } else {
+    document.getElementById('password').style.color = 'red';
+    document.getElementById('confirmpassword').style.color = 'red';
+  }
+	}
+</script>
+<style type="text/css">
+	html { 
+  background: url(background2.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  margin: 5% auto;
+  width: 600px;
+  height: 400px;
+  background: rgba(102,99,99,0.4);
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="mail"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+}
+</style>
+</head>
+<center>
+<body>
+<form action="register.php" method="POST">
+	<div id="login-box">
+  <div>
+    <h1>Sign up</h1>
+    
+    <input type="text" name="username" id="username" placeholder="Username" pattern="[a-zA-Z0-9]*" title="Username should contain alphanumeric characters only" required/>
+    <input type="mail" name="email" id="email" placeholder="you@you.com" required/>
+    <input type="password" name="password" id="password" onkeyup="check()" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain the following:A lowercase letter, a capital (uppercase) letter, a number and minimum of 8 characters long" required/>
+    <input type="password" name="confirmpassword" id="confirmpassword" onkeyup="check()" placeholder="Re-type Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain the following:A lowercase letter, a capital (uppercase) letter, a number and minimum of 8 characters long" required/>
+    
+    <input type="submit" name="submit" value="Sign me up" />
+  </div>
+</div>
+</form>
+</body>
+</html>
+
+
+
+
